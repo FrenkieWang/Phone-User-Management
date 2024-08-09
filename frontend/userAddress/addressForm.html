@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Address Management</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse; 
+        }
+    </style>
+</head>
+<body>
+    <div class = "app">
+        <h3 id="userAddressTitle">CRUD for User( )'s Address</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Address ID</th>
+                    <th>Address Type</th>
+                    <th>AddressLine</th>
+                    <th>Town</th>
+                    <th>countyCity</th>
+                    <th>Postal Code</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="addressList">
+                <!-- Table Body will be loaded here by JavaScript -->
+            </tbody>
+        </table>            
+        
+        <h3>Address Submit Form</h3>
+        <div>
+            <button type="button" id="generateRandomAddress">Generate a Random Address</button>
+        </div>  
+        <form id="addressForm">
+            <!-- Input Item -->
+            <div>
+                <label>Address Line 1:<span style="color: red;">*</span></label>
+                <input required type="text" name="addressLine1" class="form-control"/>
+            </div>
+            <div>
+                <label>Address Line 2:</label>
+                <input type="text" name="addressLine2" class="form-control"/>
+            </div>
+            <div>
+                <label>Town/City:<span style="color: red;">*</span></label>
+                <input required type="text" name="town" class="form-control"/>
+            </div>
+            <div>
+                <label>County/City:<span style="color: red;">*</span></label>
+                <input required type="text" name="countyCity" class="form-control"/>
+            </div>
+            <div>
+                <label>Eircode:</label>
+                <input type="text" name="eircode" class="form-control"/>
+            </div>
+            <!-- Button Controller -->
+            <div>
+                <button type="button" id="createAddressButton">Create Address</button>
+            </div>
+            <div>
+                <button type="button" id="editAddressButton" disabled>Edit Address</button>
+            </div>  
+        </form>       
+
+        <a href="./userForm.html" id="backToUserList">Back to User List</a>  
+    </div> <!-- END of APP -->
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./addressForm.js"></script>
+</body>
+</html>

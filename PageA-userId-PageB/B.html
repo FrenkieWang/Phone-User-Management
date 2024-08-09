@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page B</title>
+</head>
+<body>
+    <h1>B</h1>
+    <!-- 链接到页面 A -->
+    <a href="A.html">Go to Page A</a>
+
+    <script>
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const userID = params.get('userID');
+            if (userID) {
+                alert("Loaded with userID: " + userID);
+            }
+        };
+    </script>
+</body>
+</html>

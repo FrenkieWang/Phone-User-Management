@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page A</title>
+</head>
+<body>
+    <h1>A</h1>
+    <!-- 链接到页面 B -->
+    <a href="#" onclick="goToB()">Go to Page B</a>
+
+    <script>
+        function goToB() {
+            const userID = 1;  // 设置userID
+            window.location.href = 'B.html?userID=' + userID;  // 跳转到B并附带userID
+        }
+    </script>
+</body>
+</html>

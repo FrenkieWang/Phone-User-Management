@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Management</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse; 
+        }
+    </style>
+</head>
+<body>
+    <div class = "app">
+        <h3>CRUD for Phone Order</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>User ID</th>
+                    <th>Phone Basket</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="orderList">
+                <!-- Table Body will be loaded here by JavaScript -->
+            </tbody>
+        </table>
+
+        <h3>Order Submit Form</h3>
+        <div>
+            <button type="button" id="generateRandomPhone">Generate a Random Phone</button>
+        </div>  
+        <form id="orderForm">
+            <!-- Input Item -->
+            <div id = "userRadio">
+                <label>User List:</label>
+            </div>
+            <div id = "phoneCheckbox">
+                <label>Phone Basket:</label>
+            </div>
+            <!-- Button Controller -->
+            <div>
+                <button type="button" id="createOrderButton">Create Order</button>
+            </div>
+            <div>
+                <button type="button" id="editOrderButton" disabled>Edit Order</button>
+            </div>  
+        </form>       
+    </div> <!-- END of APP -->
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./orderForm.js"></script>
+</body>
+</html>

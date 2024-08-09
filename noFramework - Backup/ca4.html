@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User and Address Management</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse; 
+        }
+    </style>
+</head>
+<body>
+    <div class = "app">
+
+        <div id="userDashBoard" style="display: block;">
+            <h3>CRUD for Users</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Title</th>
+                        <th>First Name</th>
+                        <th>Sur Name</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="userList">
+                    <!-- Table Body will be loaded here by JavaScript -->
+                </tbody>
+            </table>
+           
+            <h3>User Submit Form</h3>
+            <h4 id="editingUser">Editing User: None</h4>
+            <div>
+                <button type="button" id="generateRandomUser">Generate a Random User</button>
+            </div>  
+            <form id="userForm">
+                <!-- Input Item -->
+                <div>
+                    <label>Title:<span style="color: red;">*</span></label>
+                    <select id="UserTitleSelect" name="title" onchange="toggleTitleOther(this);">
+                        <option value="Mx" selected>Mx</option>
+                        <option value="Ms">Ms</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Miss">Miss</option>
+                        <option value="Dr">Dr</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div id="titleOtherGroup" style="display:none;">
+                    <label>Title Other:</label>
+                    <input type="text" name="titleOther">
+                </div>
+                <div>
+                    <label>First Name:<span style="color: red;">*</span></label>
+                    <input type="text" name="firstName" required>
+                </div>
+                <div>
+                    <label>Sur Name:<span style="color: red;">*</span></label>
+                    <input type="text" name="surName" required>
+                </div>
+                <div>
+                    <label>Phone Number:<span style="color: red;">*</span></label>
+                    <input type="tel" name="mobile" required>
+                </div>
+                <div>
+                    <label>Email:<span style="color: red;">*</span></label>
+                    <input type="email" name="email" required>
+                </div>
+                <!-- Button Controller -->
+                <div>
+                    <button type="button" id="createUserButton">Create User</button>
+                </div>
+                <div>
+                    <button type="button" id="editUserButton" disabled>Edit User</button>
+                </div>  
+            </form>          
+        </div> <!-- END of userDashboard -->
+
+        <div id="addressDashBoard" style="display: none;">
+            <h3 id="userAddressTitle">CRUD for User( )'s Address</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Address ID</th>
+                        <th>Type</th>
+                        <th>AddressLine</th>
+                        <th>Town</th>
+                        <th>countyCity</th>
+                        <th>Postal Code</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="addressList">
+                    <!-- Table Body will be loaded here by JavaScript -->
+                </tbody>
+            </table>            
+         
+            <h3>Address Submit Form</h3>
+            <h4 id="editingAddress">Editing Address: None</h4>
+            <div>
+                <button type="button" id="generateRandomAddress">Generate a Random Address</button>
+            </div>  
+            <form id="addressForm">
+                 <!-- Input Item -->
+                <div>
+                    <label>Address Type:<span style="color: red;">*</span></label>
+                    <div>
+                        <input type="radio" id="home" name="addressType" value="home" checked/>
+                        <label for="home">Home</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="shipping" name="addressType" value="shipping"/>
+                        <label for="shipping">Shipping</label>
+                    </div>
+                </div>
+                <div>
+                    <label>Address Line 1:<span style="color: red;">*</span></label>
+                    <input required type="text" name="addressLine1" class="form-control"/>
+                </div>
+                <div>
+                    <label>Address Line 2:</label>
+                    <input type="text" name="addressLine2" class="form-control"/>
+                </div>
+                <div>
+                    <label>Town/City:<span style="color: red;">*</span></label>
+                    <input required type="text" name="town" class="form-control"/>
+                </div>
+                <div>
+                    <label>County/City:<span style="color: red;">*</span></label>
+                    <input required type="text" name="countyCity" class="form-control"/>
+                </div>
+                <div>
+                    <label>Eircode:</label>
+                    <input type="text" name="eircode" class="form-control"/>
+                </div>
+                <!-- Button Controller -->
+                <div>
+                    <button type="button" id="createAddressButton">Create Address</button>
+                </div>
+                <div>
+                    <button type="button" id="editAddressButton" disabled>Edit Address</button>
+                </div>  
+            </form>       
+
+            <a href="#" id="backToUserList">Back to User List</a>  
+        </div> <!-- END of addressDashboard -->
+
+    </div> <!-- END of APP -->
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="ca4.js"></script>
+</body>
+</html>

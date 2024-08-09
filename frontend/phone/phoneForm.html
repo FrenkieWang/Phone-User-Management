@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phone Management</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse; 
+        }
+    </style>
+</head>
+<body>
+    <div class = "app">
+        <h3>CRUD for Phone Items</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Phone ID</th>
+                    <th>Manufacturer</th>
+                    <th>Model</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="phoneList">
+                <!-- Table Body will be loaded here by JavaScript -->
+            </tbody>
+        </table>
+
+        <h3>Phone Submit Form</h3>
+        <div>
+            <button type="button" id="generateRandomPhone">Generate a Random Phone</button>
+        </div>  
+        <form id="phoneForm">
+            <!-- Input Item -->
+            <div>
+                <label>Manufacturer:</label>
+                <input type="text" name="manufacturer" required>
+            </div>
+            <div>
+                <label>Model:</label>
+                <input type="text" name="model" required>
+            </div>
+            <div>
+                <label>Price:</label>
+                <input type="number" step="0.01" min="0.01" name="price" required>
+            </div>
+            <!-- Button Controller -->
+            <div>
+                <button type="button" id="createPhoneButton">Create Phone</button>
+            </div>
+            <div>
+                <button type="button" id="editPhoneButton" disabled>Edit Phone</button>
+            </div>  
+        </form>       
+    </div> <!-- END of APP -->
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./phoneForm.js"></script>
+</body>
+</html>

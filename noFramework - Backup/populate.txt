@@ -1,0 +1,36 @@
+ORIGINAL:
+{
+    "_id": "5f8d04f8c8d6d64bfcd2fac1",
+    "memberID": "5f8d04f1c8d6d64bfcd2faa8",
+    "classBasket":  [
+        "5f8d0501c8d6d64bfcd2fac2",
+        "5f8d0505c8d6d64bfcd2fac3",
+        "5f8d0509c8d6d64bfcd2fac4",
+    ]  
+}
+
+
+
+POPULATE:
+{
+  "_id": "5f8d04f8c8d6d64bfcd2fac1",
+  "memberID": {
+    "_id": "5f8d04f1c8d6d64bfcd2faa8",
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  "classBasket": [
+    {
+      "_id": "5f8d0501c8d6d64bfcd2fac2",
+      "courseName": "Mathematics 101"
+    },
+    {
+      "_id": "5f8d0505c8d6d64bfcd2fac3",
+      "courseName": "Physics 201"
+    },
+    {
+      "_id": "5f8d0509c8d6d64bfcd2fac4",
+      "courseName": "Chemistry 301"
+    }
+  ]
+}

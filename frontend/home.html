@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta>
+<title>Home Page</title>
+<style>
+    iframe {
+        width: 100%;
+        height: 90vh;
+        border: none;
+    }
+</style>
+</head>
+<body>
+    <h3>Menu</h3>
+    <nav>
+        <ul>
+            <li><a href="./userAddress/userForm.html" target="contentFrame">User</a></li>
+            <li><a href="./phone/phoneForm.html" target="contentFrame">Phone</a></li>
+            <li><a href="./order/orderForm.html" target="contentFrame">Order</a></li>
+        </ul>
+    </nav>
+
+    <a href></a>
+
+     <!-- src = Default Page -->
+    <iframe id="content" name="contentFrame" src="./userAddress/userForm.html"></iframe>
+
+    <script>
+        // Add Query Parameter in addressForm.html
+        window.showAddressTable = function(userID, addressType) {
+            var contentFrame = document.getElementById("content");
+            contentFrame.src  = 'addressForm.html?userID=' + userID 
+                + '&addressType=' + addressType;  
+        }  
+    </script>
+</body>
+</html>
